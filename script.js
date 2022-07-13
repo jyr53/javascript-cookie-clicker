@@ -1,9 +1,14 @@
 let score=0;
 let fde=1;
-let arrCout=[50,100,150,200,250,300,350,400,450,500,550,600,650];
-let autoTime=[0,0,0,1000,500,333,250,200,150]
+let incre=50;
+let arrCout=[];
+for (i=0;i<30;i++){  // pour charger le tableau
+arrCout.push(incre);
+incre=incre+50;
+}
+let autoTime=[0,2500,2000,1500,1000,500,333,250,200,150,75,37]
 let  cout=0;
-let autoC=3;
+let autoC=1;
 let limitBonus=5000;
 let nIntervId;
 let valBonus=1;
@@ -11,6 +16,7 @@ let limitT=30;
 let id;
 let element;
 let bloqBo=true;
+let tempoS;
 
 function MAJAffichage(id,element){ //fonction affichage
     let piece=  document.getElementById(id);
@@ -20,36 +26,53 @@ function MAJAffichage(id,element){ //fonction affichage
 function augmenter(){
     score=score+fde*valBonus;
     MAJAffichage("affichage",score);
-    controle();
+    controleDe();
+    controleAut();
 }
 
-function aleatoire(){
+function aleatoire(){ //fonction du dé
 if (score>arrCout[cout]){
-    let arr = [1,2,3,4,5,6];
-    fde = arr[Math.floor(Math.random() * 6)];
-    MAJAffichage("affichade",fde);
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+    fde = arr[Math.floor(Math.random() * 10)];
+    MAJAffichage("valde",fde);
     score=score-arrCout[cout];
     MAJAffichage("affichage",score);
     cout++;
     MAJAffichage("cout",arrCout[cout]);
 }}
-  
-function controle(){//permet de modifier l'affichage selon son id en css
+function controleAut(){
+    let autoCk=document.getElementById('autoCliker');
+    let autoCkval=document.getElementById('NBAC');
+    if (score>arrCout[autoC]){
+        autoCk.style.opacity=1;
+        autoCk.style.backgroundColor='white';
+        autoCkval.style.backgroundColor='white';
+    }
+    else{
+        autoCk.style.opacity=0;
+    }
+}  
+function controleDe(){//permet de modifier l'affichage selon son id en css
     let piece=  document.getElementById('affichade');
+    let denum= document.getElementById('deNum');
+ 
     if (score>arrCout[cout]){
         piece.style.opacity= 1;
         piece.style.color = 'red';
         piece.style.backgroundColor = 'yellow';
+        denum.style.opacity=1;
 }
 else {
         piece.style.opacity=0;
+        denum.style.opacity=0;
 }}
 
 function autoClick(){ //fonction 
-  if (score>arrCout[autoC]){
+  if (score>arrCout[autoC]||autoC==0){
          score=score-arrCout[autoC];
          MAJAffichage("affichage",score);
-            nIntervId=null;
+         MAJAffichage("NBAC",autoC);
+        nIntervId=null;
     if (!nIntervId) {
         nIntervId = setInterval(augmenter,autoTime[autoC]);}
         MAJAffichage("coutAuTC",arrCout[autoC]);
@@ -76,4 +99,6 @@ if (limitT==0)
  limitT=30;
  MAJAffichage("timeBonus",limitT);
 }}
-
+function reset(){
+    window.location.reload();
+}

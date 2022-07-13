@@ -1,57 +1,73 @@
-normelise.css
+
 body{
-   color: greenyellow;
+
+ background-image: url("chocolate_chip_cookies.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+
+}
+.gauche{
+  display: flex;
+  flex-basis: 33vw;
+  text-align: center;
+  align-items:center;  
+  flex-direction: column;
+  justify-content: center;
+}
+.centre{
+  display: flex;
+  flex-basis: 33vw;
+  text-align: center;
+  align-items:center;  
+  flex-direction: column;
+  justify-content: space-around;
+}
+.droite{
+  display: flex;
+  text-align: center;
+  align-items:center; 
+  align-content: center; 
+  flex-direction: column;
+  justify-content: space-around;
 }
 .global{
-  text-align: center;
-  align-items:center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  display: flex;
+height: 100vh;
+  flex-direction: row;
+  flex: auto;
 }
-.clic{
-
-  grid-column: 3;
-  grid-row: 3;
-
-    background-color: #ccc;
-    border: 0;
-    outline: 0;
+#clic{
+width: 75%;
+height: 30%;
+  writing-mode: horizontal-tb;
+ background-image:  url("cookie.svg");
+ background-repeat: no-repeat;
+ background-size: 100px;
   }
   .affichage{
-  grid-column: 2;
-  grid-row: 3;
+background-color: aliceblue;
  font-display: center;
   
   }
   .deNum{
-
-  grid-column: 1;
-  grid-row: 3;
-  opacity: 1;
-  background-color: blueviolet;
-  color:azure
+    height: 30px;
+    width: 30px;
+opacity: 0;
+  
   }
   .affichade{
-  grid-column: 1;
-  grid-row: 2;
-  opacity: 0;
+opacity: 0;
   }
   .lance{
- grid-column:1;
-grid-row:1;
-  }
-  .autoCliker{
-    grid-column: 2;
-    grid-row: 2;
     background-color: aqua;
   }
+  .autoCliker{
+   opacity: 0;
+  ;
+  }
   .AuTC{
-    grid-column: 1;
-    grid-row: 2;
+    background-color: rgb(0, 68, 255);
   }
   #bonus{
-    grid-column: 1;
-    grid-row: 4;
+    background-color: rgb(255, 60, 0);
   }
