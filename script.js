@@ -28,6 +28,7 @@ function augmenter(){
     MAJAffichage("affichage",score);
     controleDe();
     controleAut();
+    controlebonus();
 }
 
 function aleatoire(){ //fonction du dé
@@ -40,7 +41,7 @@ if (score>arrCout[cout]){
     cout++;
     MAJAffichage("cout",arrCout[cout]);
 }}
-function controleAut(){
+function controleAut(){//controle l'affichage de l'autoclick
     let autoCk=document.getElementById('autoCliker');
     let autoCkval=document.getElementById('NBAC');
     if (score>arrCout[autoC]){
@@ -52,7 +53,7 @@ function controleAut(){
         autoCk.style.opacity=0;
     }
 }  
-function controleDe(){//permet de modifier l'affichage selon son id en css
+function controleDe(){//permet de modifier l'affichage selon son id en css du dé
     let piece=  document.getElementById('affichade');
     let denum= document.getElementById('deNum');
  
@@ -63,10 +64,22 @@ function controleDe(){//permet de modifier l'affichage selon son id en css
         denum.style.opacity=1;
 }
 else {
-        piece.style.opacity=0;
         denum.style.opacity=0;
+        
 }}
-
+function controlebonus(){//permet de modifier l'affichage selon son id en css du bonus
+    let piece=  document.getElementById('bonus');
+ 
+    if (score>limitBonus){
+        piece.style.opacity= 1;
+        piece.style.color = 'red';
+        piece.style.backgroundColor = 'yellow';
+        
+}
+else {
+        piece.style.opacity=0;
+        
+}}
 function autoClick(){ //fonction 
   if (score>arrCout[autoC]||autoC==0){
          score=score-arrCout[autoC];
@@ -75,15 +88,15 @@ function autoClick(){ //fonction
         nIntervId=null;
     if (!nIntervId) {
         nIntervId = setInterval(augmenter,autoTime[autoC]);}
-        MAJAffichage("coutAuTC",arrCout[autoC]);
         autoC++;
+        MAJAffichage("coutAuTC",arrCout[autoC]);
 }}
 
 function bonus(){
     if (score >limitBonus&&bloqBo){
         valBonus=2;
         bloqBo=false;
-        score=score-5000;
+        score=score-limitBonus;
         MAJAffichage("affichage",score);
         tempoS=setInterval(tempsBonus,1000);
 }}
