@@ -6,7 +6,7 @@ for (i=0;i<30;i++){  // pour charger le tableau
 arrCout.push(incre);
 incre=incre+50;
 }
-let autoTime=[0,2500,2000,1500,1000,500,333,250,200,150,75,37]
+let autoTime=[0,1000,500,333,250,200,166,142,125,111,100,90,83,37]
 let  cout=0;
 let autoC=1;
 let limitBonus=5000;
@@ -72,14 +72,12 @@ function controlebonus(){//permet de modifier l'affichage selon son id en css du
  
     if (score>limitBonus){
         piece.style.opacity= 1;
-        piece.style.color = 'red';
-        piece.style.backgroundColor = 'yellow';
-        
+        piece.style.color = 'red';         
 }
-else {
-        piece.style.opacity=0;
-        
-}}
+if (score<limitBonus&&bloqBo){
+       piece.style.opacity=0;    
+}
+}
 function autoClick(){ //fonction 
   if (score>arrCout[autoC]||autoC==0){
          score=score-arrCout[autoC];
