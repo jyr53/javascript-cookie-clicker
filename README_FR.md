@@ -51,3 +51,7 @@ Faire en sorte que les boutons multiplicateur, autoclic et bonus ne soient clica
 
 ## Étape 15 : _du CSS_
 Que ce soit beau ! Pas d'images !
+
+dans l'exercice j'ai ajouter un dé numerique qui permet aleatoiremet (attention on peu revenir a 1 mais aussi a 10 )de modifier le nombre de cookies fabriquer par clic 
+l'efaccement des fonction inaccessible si le score est trop petit
+modifié par jean-yves
