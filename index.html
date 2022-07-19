@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-   
+
     <title>cookie cliker</title>
 </head>
-<body> 
-    <div class="tout" id ="tout" >
-    <h1>bonjour c'est le cookie cliker de jean-yves </h1>
-     <div class="global" id="global">
-        <div class="gauche">
-         <div class="clic" id="clic" onclick="augmenter()"> <h3>clic</h3></div>
-                <div class="affichage" id="affichage" >0</div>
-                </div><div class="centre" >
-                    <div class="affichade" id="affichade" ><h2>valeur du dé</h2><div id="valde">0</div> </div>
-                    <div id="NBAC">nombre autoclic</div>
-                </div><div class="droite">
-                <div class="lance"><h3>pour lancer le de il vous en coutera</h3><div class="cout"id="cout">50</div></div> 
-                        <div class="deNum" id="deNum" onclick="aleatoire()"><h1>🎲</h1></div>
-                   
-              
-            <div class="AuTC"><h3>pour avoir un autocliker il vous en coutera</h3><div class="coutAuTC"id="coutAuTC">100</div></div>  
-            <div class="autoCliker" id="autoCliker" onclick="autoClick()">autoclik </div>
-            <div class="bonus" id="bonus" onclick="bonus()" ><h3>Ce bouton bonus sera actif 30 Secondes et vous coutera 5000 points</h3> <div id="timeBonus">0</div></div> 
-        </div>
-        
+
+<body>
+    <div class="tout" id="tout">
+        <h1>bonjour c'est le cookie cliker de jean-yves </h1>
+        <div class="global" id="global">
+            <div class="gauche">
+                <div class="clic" id="clic" onclick="augmenter()"> </div>
+                <div>
+                    <h3>Nombre de cookies</h3>
+                    <div class="affichage" id="affichage">0</div>
+                </div>
+            </div>
+            <div class="centre">
+
+            </div>
+            <div class="droite">
+                <div class="lance">
+                    <h3> lancer le de vous permettra peu etre d'avoir plus de cookies mais il vous en coutera</h3>
+                    <div class="cout" id="cout">50</div>cookies
+                </div>
+                <div class="deNum" id="deNum" onclick="aleatoire()">
+                    <h1>🎲</h1>
+                </div>
+                <div class="affichade" id="affichade">
+                    <h2>valeur du dé</h2>
+                    <div id="valde">1</div>
+                </div>
+
+
+                <div class="AuTC">
+                    <h3>pour avoir un autocliker il vous en coutera</h3>
+                    <div class="coutAuTC" id="coutAuTC">100</div>cookies
+                </div>
+                <div id="NBAC">0</div>
+                <div class="autoCliker" id="autoCliker" onclick="autoClick()">autoclik </div>
+                <div class="bonus" id="bonus" onclick="bonus()">
+                    <h3>Ce bouton bonus sera actif 30 Secondes et vous coutera 5000 points</h3>
+                    <div id="timeBonus">0</div>
+                </div>
+            </div>
+
         </div>
         <div><button type="reset" onclick="reset()">RAZ</button></div>
-</div>
+    </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

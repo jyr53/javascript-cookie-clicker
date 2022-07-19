@@ -1,75 +1,91 @@
+body {
 
-body{
-
- background-image: url("chocolate_chip_cookies.jpg");
+  background-image: url("chocolate_chip_cookies.jpg");
   background-repeat: no-repeat;
-  background-size: 95vw 120vh;
+  background-size: 60vw 120vh;
 
 }
-.gauche{
+
+h1 {
+  color: aliceblue;
+}
+
+.gauche {
   display: flex;
   flex-basis: 30vw;
   text-align: center;
-  align-items:center;  
+  align-items: center;
   flex-direction: column;
   justify-content: center;
 }
-.centre{
+
+.centre {
   display: flex;
   flex-basis: 30vw;
   text-align: center;
-  align-items:center;  
+  align-items: center;
   flex-direction: column;
   justify-content: space-around;
 }
-.droite{
+
+.droite {
   display: flex;
   flex-basis: 30vw;
   text-align: center;
-  align-items:center; 
-  align-content: center; 
+  align-items: center;
+  align-content: center;
   flex-direction: column;
   justify-content: space-around;
 }
-.global{
+
+.global {
   display: flex;
-height: 100vh;
+  height: 100vh;
   flex-direction: row;
   flex: auto;
 }
-#clic{
-width: 75%;
-height: 30%;
+
+#clic {
+  width: 75%;
+  height: 30%;
   writing-mode: horizontal-tb;
- background-image:  url("cookie.svg");
- background-repeat: no-repeat;
- background-size: 100px;
-  }
-  .affichage{
-background-color: aliceblue;
- font-display: center;
-  
-  }
-  .deNum{
-    height: 50px;
-    width: 50px;
-opacity: 0;
-  
-  }
-  .affichade{
-opacity: 0;
-  }
-  .lance{
-    background-color: aqua;
-  }
-  .autoCliker{
-   opacity: 0;
+  background-image: url("cookie.svg");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  cursor: pointer;
+}
+
+.affichage {
+  background-color: aliceblue;
+  font-display: center;
+
+}
+
+.deNum {
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+
+}
+
+.affichade {
+  opacity: 0;
+}
+
+.lance {
+  background-color: aqua;
+}
+
+.autoCliker {
+  opacity: 0;
   ;
-  }
-  .AuTC{
-    background-color: rgb(0, 68, 255);
-  }
-  .bonus{
-    background-color: rgb(0, 140, 255);
-    opacity:0;
-  }
+}
+
+.AuTC {
+  background-color: rgb(0, 140, 255);
+}
+
+.bonus {
+  background-color: rgb(0, 140, 255);
+  opacity: 0;
+}
