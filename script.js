@@ -47,9 +47,6 @@ function controleAut() {//controle l'affichage de l'autoclick
     let autoCkval = document.getElementById('NBAC');
     if (score > arrCout[autoC + 1]) {
         autoCk.style.opacity = 1;
-        autoCk.style.backgroundColor = 'white';
-        autoCkval.style.backgroundColor = 'white';
-
     }
     else {
         autoCk.style.opacity = 0;
@@ -61,8 +58,6 @@ function controleDe() {//permet de modifier l'affichage selon son id en css du d
 
     if (score > arrCout[cout]) {
         piece.style.opacity = 1;
-        piece.style.color = 'red';
-        piece.style.backgroundColor = 'yellow';
         denum.style.opacity = 1;
     }
     else {
@@ -75,7 +70,6 @@ function controlebonus() {//permet de modifier l'affichage selon son id en css d
 
     if (score > limitBonus) {
         piece.style.opacity = 1;
-        piece.style.color = 'red';
     }
     if (score < limitBonus && bloqBo) {
         piece.style.opacity = 0;

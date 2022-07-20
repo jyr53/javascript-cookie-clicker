@@ -12,41 +12,50 @@
 
 <body>
     <div class="tout" id="tout">
-        <h1>bonjour c'est le cookie cliker de jean-yves </h1>
+        <h1>Bonjour c'est le cookie cliker de Jean-Yves </h1>
         <div class="global" id="global">
+
             <div class="gauche">
+
                 <div class="clic" id="clic" onclick="augmenter()"> </div>
                 <div>
-                    <h3>Nombre de cookies</h3>
+                    <h2>Nombre de cookies</h2>
                     <div class="affichage" id="affichage">0</div>
                 </div>
             </div>
-            <div class="centre">
 
-            </div>
             <div class="droite">
-                <div class="lance">
-                    <h3> lancer le de vous permettra peu etre d'avoir plus de cookies mais il vous en coutera</h3>
-                    <div class="cout" id="cout">50</div>cookies
-                </div>
-                <div class="deNum" id="deNum" onclick="aleatoire()">
-                    <h1>🎲</h1>
-                </div>
-                <div class="affichade" id="affichade">
-                    <h2>valeur du dé</h2>
-                    <div id="valde">1</div>
-                </div>
+                <div class="formBox color3">
+                    <h4> Lancer le dé vous permettra peu etre d'avoir plus de cookies mais il vous en coutera.</h4>
+                    <div class="cout" id="cout">50</div>Cookies
 
 
-                <div class="AuTC">
-                    <h3>pour avoir un autocliker il vous en coutera</h3>
-                    <div class="coutAuTC" id="coutAuTC">100</div>cookies
+                    <div class="bouton" id="deNum" onclick="aleatoire()">
+                        <img class="image" src="43878.gif" alt="">
+                    </div>
+
+                    <div id="affichade">
+                        <h4>valeur du dé<div id="valde">1</div>
+                        </h4>
+                    </div>
                 </div>
-                <div id="NBAC">0</div>
-                <div class="autoCliker" id="autoCliker" onclick="autoClick()">autoclik </div>
-                <div class="bonus" id="bonus" onclick="bonus()">
-                    <h3>Ce bouton bonus sera actif 30 Secondes et vous coutera 5000 points</h3>
-                    <div id="timeBonus">0</div>
+                <div class="color1 formBox">
+                    <h4>Pour avoir un autocliker il vous en coutera
+                        <div id="coutAuTC">100</div>cookies
+                    </h4>
+
+                    <div class="bouton" id="autoCliker" onclick="autoClick()">Autoclik </div>
+                    <div class="AuTC">
+                        <h4>Nombre d'autoclick <div id="NBAC">0</div>
+                        </h4>
+                    </div>
+                </div>
+                <div class="color3 formBox">
+                    <h4>Le bouton bonus sera actif 30 Secondes et vous coutera 5000 points
+                        <div id="timeBonus">0</div>
+                    </h4>
+
+                    <div class="bouton" id="bonus" onclick="bonus()">Bonus</div>
                 </div>
             </div>
 

@@ -1,36 +1,33 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Grape+Nuts&family=Roboto:ital,wght@0,100;1,100&display=swap');
 
+body {
+  height: 100vh;
   background-image: url("chocolate_chip_cookies.jpg");
   background-repeat: no-repeat;
   background-size: 60vw 120vh;
-
+  font-family: 'Cookie', cursive;
+  font-size: 20px;
 }
 
 h1 {
-  color: aliceblue;
+  color: whitesmoke;
 }
 
 .gauche {
   display: flex;
-  flex-basis: 30vw;
+  flex-basis: 60vw;
   text-align: center;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 
-.centre {
-  display: flex;
-  flex-basis: 30vw;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-}
+
 
 .droite {
   display: flex;
   flex-basis: 30vw;
+  min-height: 100vh;
   text-align: center;
   align-items: center;
   align-content: center;
@@ -45,6 +42,8 @@ h1 {
   flex: auto;
 }
 
+
+
 #clic {
   width: 75%;
   height: 30%;
@@ -56,36 +55,39 @@ h1 {
 }
 
 .affichage {
-  background-color: aliceblue;
+  background-color: rgb(235, 214, 25);
   font-display: center;
 
 }
 
-.deNum {
-  height: 50px;
-  width: 50px;
+.image {
+  height: 10vh;
+}
+
+
+
+.bouton {
   opacity: 0;
-
+  cursor: pointer;
+  border-radius: 15% 25%;
+  border-width: 5px;
+  border-color: black;
+  border: solid;
 }
 
-.affichade {
-  opacity: 0;
+.formBox {
+  border-radius: 15% 15%;
+  padding: 1em;
 }
 
-.lance {
-  background-color: aqua;
+.color1 {
+  background-color: #DAA156;
 }
 
-.autoCliker {
-  opacity: 0;
-  ;
+.color2 {
+  background-color: #EBB267;
 }
 
-.AuTC {
-  background-color: rgb(0, 140, 255);
-}
-
-.bonus {
-  background-color: rgb(0, 140, 255);
-  opacity: 0;
+.color3 {
+  background-color: #BA6D22;
 }
